@@ -4,5 +4,5 @@
 
 ## Using *nix utilities
 ```bash
-zcat $VCF_FILE | grep -E '^#|(PASS.*AC=1;|PASS.*AC=1,)' | gzip > singletons.vcf.gz
+zcat $VCF_FILE | grep -E '^#|(PASS.*AC=((\d*,)*1(;|,)))' | gzip > singletons.vcf.gz
 ```
